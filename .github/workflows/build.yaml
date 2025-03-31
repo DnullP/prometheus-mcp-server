@@ -1,4 +1,4 @@
-name: Build and Push Kafka Exporter Docker Image
+name: Build and Push Docker Image
 
 on:
   workflow_dispatch:
@@ -28,12 +28,12 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHTK }}
 
       # 命名小写
       - name: downcase REPO
         run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GHTK}
+          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
       # 构建 Docker 镜像
       - name: Build Docker Image
