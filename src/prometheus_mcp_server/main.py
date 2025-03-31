@@ -37,7 +37,7 @@ def run_server():
     print("Running server in standard mode...")
     
     # Run the server with the stdio transport
-    mcp.run(transport="stdio")
+    mcp.run(transport="sse")
 
 if __name__ == "__main__":
     run_server()

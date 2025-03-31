@@ -144,4 +144,4 @@ async def get_targets() -> Dict[str, List[Dict[str, Any]]]:
 
 if __name__ == "__main__":
     print(f"Starting Prometheus MCP Server...")
-    mcp.run()
+    mcp.run(transport="sse")
