@@ -33,7 +33,7 @@ jobs:
       # 命名小写
       - name: downcase REPO
         run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GHTK}
 
       # 构建 Docker 镜像
       - name: Build Docker Image
